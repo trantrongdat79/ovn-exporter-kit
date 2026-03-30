@@ -1,0 +1,27 @@
+farm_rules:
+  # Example: Match hostnames containing "hni-cloud-ops04"
+  - pattern: "hni-cloud-ops04"
+    farm: "hni-ops4"
+  
+  # Example: Match hostnames containing "hcm-cloud-ops03"
+  - pattern: "hcm-cloud-ops03"
+    farm: "hcm-ops3"
+  
+  # Example: Match hostnames containing "hni-cloud-hci"
+  - pattern: "hni-cloud-hci"
+    farm: "hni-hci"
+
+  # Example: Match hostnames containing "hcm-cloud-hci"
+  - pattern: "hcm-cloud-hci"
+    farm: "hcm-hci"
+
+  - pattern: "ovn-scale-test"
+    farm: "dattt4-ops-lab-test"
+
+  - pattern: "Site2-ops"
+    farm: "hungnt3-ops-lab-test"
+
+  # Catch-all pattern for unmatched hostnames
+  # This should always be the last rule
+  - pattern: "default"
+    farm: "other"

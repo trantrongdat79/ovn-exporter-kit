@@ -1,0 +1,60 @@
+{
+  "filebeat_format": {
+    "message": "[COVERAGE] [2025-01-09 09:50:01] util_xalloc              5127.0/sec  4746.300/sec     4774.4800/sec   total: 3124016321",
+    "host": {
+      "name": "hni-cloud-ops04-host1"
+    },
+    "log": {
+      "file": {
+        "path": "/home/admin/log/openvswitch/ovn-nb-db-coverage.log"
+      }
+    }
+  },
+  "fluentd_format": {
+    "message": "[COVERAGE] [2025-01-09 09:50:01] util_xalloc              5127.0/sec  4746.300/sec     4774.4800/sec   total: 3124016321",
+    "log_path": "/home/admin/log/openvswitch/ovn-nb-db-coverage.log",
+    "hostname": "hni-cloud-ops04-host1"
+  },
+  "expected_output": [
+    {
+      "command": "coverage",
+      "time": "2025-01-09 09:50:01",
+      "metric": "util_xalloc",
+      "host": "hni-cloud-ops04-host1",
+      "farm": "hni-ops4",
+      "component": "ovn-nb-db",
+      "interval": "info_5s",
+      "value": 5127.0
+    },
+    {
+      "command": "coverage",
+      "time": "2025-01-09 09:50:01",
+      "metric": "util_xalloc",
+      "host": "hni-cloud-ops04-host1",
+      "farm": "hni-ops4",
+      "component": "ovn-nb-db",
+      "interval": "info_1m",
+      "value": 4746.300
+    },
+    {
+      "command": "coverage",
+      "time": "2025-01-09 09:50:01",
+      "metric": "util_xalloc",
+      "host": "hni-cloud-ops04-host1",
+      "farm": "hni-ops4",
+      "component": "ovn-nb-db",
+      "interval": "info_1h",
+      "value": 4774.4800
+    },
+    {
+      "command": "coverage",
+      "time": "2025-01-09 09:50:01",
+      "metric": "util_xalloc",
+      "host": "hni-cloud-ops04-host1",
+      "farm": "hni-ops4",
+      "component": "ovn-nb-db",
+      "interval": "total",
+      "value": 3124016321
+    }
+  ]
+}

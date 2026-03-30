@@ -1,0 +1,35 @@
+# Docker Compose configuration for OVN Exporter Kit
+services:
+  raw_to_json:
+    build:
+      context: .
+      dockerfile: raw_to_json/Dockerfile
+    container_name: ovn-raw-to-json
+    env_file:
+      - .env
+    volumes:
+      - ./config/farm_rules.yaml:/config/farm_rules.yaml:ro
+      - ./logs/raw_to_json:/app/logs/raw_to_json
+    restart: unless-stopped
+    networks:
+      - ovn-exporter-kit-network
+
+  # json_to_prometheus:
+  #   build:
+  #     context: .
+  #     dockerfile: json_to_prometheus/Dockerfile
+  #   container_name: ovn-json-to-prometheus
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./config/farm_rules.yaml:/config/farm_rules.yaml:ro
+  #     - ./logs/json_to_prometheus:/app/logs/json_to_prometheus
+  #   ports:
+  #     - "${PROMETHEUS_PORT}:8001"
+  #   restart: unless-stopped
+  #   networks:
+  #     - ovn-exporter-kit-network
+
+networks:
+  ovn-exporter-kit-network:
+    driver: bridge

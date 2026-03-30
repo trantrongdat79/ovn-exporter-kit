@@ -1,0 +1,25 @@
+# Example farm assignment rules
+#
+# Copy this file to farm_rules.yaml and customize for your environment.
+#
+# Patterns are checked sequentially from top to bottom.
+# First matching pattern wins.
+# If hostname contains the pattern string, it matches.
+
+farm_rules:
+  # Example: Match hostnames containing "hni-cloud-ops04"
+  - pattern: "hni-cloud-ops04"
+    farm: "hni-ops4"
+  
+  # Example: Match hostnames containing "hcm-cloud-ops03"
+  - pattern: "hcm-cloud-ops03"
+    farm: "hcm-ops3"
+  
+  # Example: Match hostnames containing "hni-cloud-hci"
+  - pattern: "hni-cloud-hci"
+    farm: "hni-hci"
+  
+  # Catch-all pattern for unmatched hostnames
+  # This should always be the last rule
+  - pattern: "default"
+    farm: "other"

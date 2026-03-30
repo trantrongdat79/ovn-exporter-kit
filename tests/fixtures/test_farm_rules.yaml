@@ -1,0 +1,11 @@
+# Test farm rules for unit testing
+
+farm_rules:
+  - pattern: "test-farm1"
+    farm: "farm1"
+  
+  - pattern: "test-farm2"
+    farm: "farm2"
+  
+  - pattern: "default"
+    farm: "other"

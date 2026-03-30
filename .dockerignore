@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# Virtual environments
+venv
+ENV
+env
+.venv
+
+# IDEs
+.vscode
+.idea
+*.swp
+*.swo
+
+# Testing
+.pytest_cache
+.coverage
+htmlcov
+.tox
+tests/
+
+# Logs
+logs/
+*.log
+
+# Environment and docs
+.env
+README.md
+docker-compose.yml
+requirements-dev.txt
+
+# OS
+.DS_Store
+Thumbs.db
